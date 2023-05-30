@@ -3,11 +3,11 @@ clc
 clear all
 close all
 warning off
-x = imread('Flower_edge_detection.png');
+x = imread('MATLAB/img9.png');
 figure;
 imshow(x);
 title('Original Image');
-edge_detected_image = bwareaopen(imopen(imfill(imclose(edge(rgb2gray(x),'canny'),strel('line',3,0)),'holes'),strel(ones(3,3))),1500);
+edge_detected_image = bwareaopen(imopen(imfill(imclose(edge(rgb2gray(x),'canny'),strel('line',3,0)),'holes'),strel(ones(3,3))),1);
 figure;
 imshow(edge_detected_image);
 title('Edge Detected Image');
